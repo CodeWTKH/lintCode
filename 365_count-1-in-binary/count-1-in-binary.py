@@ -4,7 +4,7 @@
 @Author:   CodeWTKH
 @Problem:  http://www.lintcode.com/problem/count-1-in-binary
 @Language: Python
-@Datetime: 17-05-30 14:58
+@Datetime: 17-06-02 21:13
 '''
 
 class Solution:
@@ -16,7 +16,7 @@ class Solution:
             num = 2 ** 32 + num
         count = 0
         while num != 0:
-            if num % 2 == 1:
-                count = count + 1
-            num = num // 2
+            if num % 2:
+                count += 1
+            num //= 2
         return count
